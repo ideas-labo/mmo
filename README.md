@@ -2,7 +2,7 @@
 
 This repository contains the data and code for the following paper:
 
-> Tao Chen and Miqing Li. 2021. Multi-Objectivizing Software Configuration Tuning. In Proceedings of The 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2021). ACM, 13 pages. DOI: 10.1145/3468264.3468555
+> Tao Chen and Miqing Li. 2021. MMO: Meta Multi-Objectivization for Software Configuration Tuning.
 
 ## Introduction
 
@@ -11,20 +11,20 @@ Automatically tuning software configuration for optimizing a single performance 
 
 ## Repository Content
 
-The [`data`](https://github.com/ideas-labo/mmo/tree/main/data) folder contains all the raw data as reported in the paper; most of the structures are self-explained but we wish to highlight the following:
+The `data` folder contains all the raw data as reported in the paper; most of the structures are self-explained but we wish to highlight the following:
 
-* The data under the folder [`1.0-0.0`](https://github.com/ideas-labo/mmo/tree/main/data/1.0-0.0) and [`0.0-1.0`](https://github.com/taochen/mmo-fse-2021/tree/main/data/0.0-1.0) are for the single-objective optimizers. The former uses O1 as the target performance objective while the latter uses O2 as the target. The data under other folders named by the subject systems are for all MMO instances (and the examined weights) and PMO.
+* The data under the folder `1.0-0.0` and `0.0-1.0` are for the single-objective optimizers. The former uses O1 as the target performance objective while the latter uses O2 as the target. The data under other folders named by the subject systems are for the MMO and PMO. The result under the weight folder `1.0` are for MMO while all other folders represent different weight values, containing the data for MMO-FSE.
 
-* For those data of MMO instances and PMO, the folder `0` and `1` denote using uses O1 and O2 as the target performance objective, respectively.
+* For those data of MMO, MMO-FSE, and PMO, the folder `0` and `1` denote using uses O1 and O2 as the target performance objective, respectively.
 
 * In the lowest-level folder where the data is stored (i.e., the `sas` folder), `SolutionSet.rtf` contains the results over all repeated runs; `SolutionSetWithMeasurement.rtf` records the results over different numbers of measurements.
 
-The [`code`](https://github.com/taochen/mmo-fse-2021/tree/main/code) folder contains all the information about the source code, as well as an executable jar file in the [`executable`](https://github.com/taochen/mmo-fse-2021/tree/main/executable) folder .
+The [`code`](https://github.com/ideas-labo/mmo/tree/main/code) folder contains all the information about the source code, as well as an executable jar file in the [`executable`](https://github.com/ideas-labo/mmo/tree/main/executable) folder .
 
 
 ## Running the Experiments
 
-To run the experiments, one can download the `mmo-experiments.jar` from the aforementioned repository (under the [`executable`](https://github.com/taochen/mmo-fse-2021/tree/main/executable) folder). Since the artifacts were written in Java, we assume that the JDK/JRE has already been installed. Next, one can run the code using `java -jar mmo-experiments.jar [subject] [runs]`, where `[subject]` and `[runs]` denote the subject software system and the number of repeated run (this is an integer and 30 is the default if it is not specified), respectively. The keyword for the systems/environments used in the paper are: 
+To run the experiments, one can download the `mmo-experiments.jar` from the aforementioned repository (under the [`executable`](https://github.com/ideas-labo/mmo/tree/main/executable) folder). Since the artifacts were written in Java, we assume that the JDK/JRE has already been installed. Next, one can run the code using `java -jar mmo-experiments.jar [subject] [runs]`, where `[subject]` and `[runs]` denote the subject software system and the number of repeated run (this is an integer and 50 is the default if it is not specified), respectively. The keyword for the systems/environments used in the paper are: 
 
 1. trimesh 
 1. x264
@@ -39,6 +39,6 @@ For example, running `java -jar mmo-experiments.jar trimesh` would execute exper
 
 For each software system, the experiment consists of the runs for MMO instances with all seven weight values, PMO and the four state-of-the-art single-objective optimizers. All the outputs would be stored in the `results` folder at the same directory as the executable jar file.
 
-Note that, since wrapping the actual software system into a VM image resulted in a surprisingly large file (50GB+), we could not upload them. Further, their settings/installations are highly complicated. Therefore, in this artifact, we use a simplified approach to emulate the experiments used in the paper by querying from the performance data we collected. This, as we have already discussed in the paper, would not change the conclusions drawn. However, to ensure realism, we have set them in a way that each run would take approximately 2 hours to complete.
+All the measurement data of the subject configurable systems have been placed inside the `mmo-experiments.jar`.
 
 
