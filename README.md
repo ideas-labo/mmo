@@ -32,14 +32,17 @@ To run the experiments, one can download the `mmo-experiments.jar` from the afor
 1. x264
 1. storm-wc
 1. storm-rs
-1. storm-sol
-1. dnn-dsr
-1. dnn-coffee
-1. LSTM 
+1. dnn-sa
+1. dnn-adiac
+1. mariadb
+1. vp9
+1. mongodb
+1. lrzip
+1. llvm 
 
-For example, running `java -jar mmo-experiments.jar trimesh` would execute experiments on the `trimesh` software for 30 repeated runs.
+For example, running `java -jar mmo-experiments.jar trimesh` would execute experiments on the `trimesh` software for 50 repeated runs.
 
-For each software system, the experiment consists of the runs for MMO instances with all seven weight values, PMO and the four state-of-the-art single-objective optimizers. All the outputs would be stored in the `results` folder at the same directory as the executable jar file.
+For each software system, the experiment consists of the runs for MMO, MMO-FSE with all weight values, PMO and the four state-of-the-art single-objective optimizers, as well as the FLASH and FLASH_MMO. All the outputs would be stored in the `results` folder at the same directory as the executable jar file.
 
 All the measurement data of the subject configurable systems have been placed inside the `mmo-experiments.jar`.
 
