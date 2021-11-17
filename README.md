@@ -28,17 +28,17 @@ The [`code`](https://github.com/ideas-labo/mmo/tree/main/code) folder contains a
 
 To run the experiments, one can download the `mmo-experiments.jar` from the aforementioned repository (under the [`executable`](https://github.com/ideas-labo/mmo/tree/main/executable) folder). Since the artifacts were written in Java, we assume that the JDK/JRE has already been installed. Next, one can run the code using `java -jar mmo-experiments.jar [subject] [runs]`, where `[subject]` and `[runs]` denote the subject software system and the number of repeated run (this is an integer and 50 is the default if it is not specified), respectively. The keyword for the systems/environments used in the paper are: 
 
-1. trimesh 
-1. x264
-1. storm-wc
-1. storm-rs
-1. dnn-sa
-1. dnn-adiac
-1. mariadb
-1. vp9
-1. mongodb
-1. lrzip
-1. llvm 
+* trimesh 
+* x264
+* storm-wc
+* storm-rs
+* dnn-sa
+* dnn-adiac
+* mariadb
+* vp9
+* mongodb
+* lrzip
+* llvm 
 
 For example, running `java -jar mmo-experiments.jar trimesh` would execute experiments on the `trimesh` software for 50 repeated runs.
 
