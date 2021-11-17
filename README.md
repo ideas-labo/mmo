@@ -1,6 +1,6 @@
 # MMO: Meta Multi-Objectivization for Software Configuration Tuning
 
-This repository contains the data and code for the following paper:
+This repository contains the data and code for the following paper that is currently submitting for publication:
 
 > Tao Chen and Miqing Li. MMO: Meta Multi-Objectivization for Software Configuration Tuning.
 
