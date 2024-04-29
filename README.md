@@ -2,7 +2,7 @@
 
 This repository contains the data and code for the following paper that is currently submitting for publication:
 
-> MMO: Meta Multi-Objectivization for Software Configuration Tuning.
+> Pengzhou Chen, Tao Chen, and Miqing Li. "MMO: Meta multi-objectivization for software configuration tuning." IEEE Transactions on Software Engineering, 2024.
 
 ## Introduction
 
